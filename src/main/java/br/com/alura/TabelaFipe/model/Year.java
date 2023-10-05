@@ -1,6 +1,6 @@
 package br.com.alura.TabelaFipe.model;
 
-public record Year(Integer codigo, String nome) {
+public record Year(String codigo, String nome) {
 
     @Override
     public String toString() { return "[Código: " + codigo + " Ano: " + nome + "]";}
