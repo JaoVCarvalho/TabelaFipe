@@ -36,6 +36,8 @@ public class Principal {
 
         address = address + "/" + codeModel + "/anos";
         vehicleYears(address);
+
+        System.out.println("\nAplicação encerrada com sucesso!");
     }
 
     public String vehicleChoice() {
@@ -155,13 +157,13 @@ public class Principal {
         List<Vehicle> vehicles = new ArrayList<>();
 
         for (Year year : years) {
-            String newAddress = address + year.codigo();
+            String newAddress = address + "/" + year.codigo();
             json = consume.getDataAPI(newAddress);
             var vehicle = convert.getData(json, Vehicle.class);
             vehicles.add(vehicle);
         }
 
-        System.out.println("\nLista completa com todos os anos desse modelo: ");
+        System.out.println("\nLista completa com todos os anos desse modelo: \n");
         vehicles.stream()
                 .sorted(Comparator.comparing(Vehicle::anoModelo))
                 .forEach(System.out::println);

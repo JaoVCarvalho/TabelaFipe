@@ -13,12 +13,12 @@ public record Vehicle(@JsonAlias("Valor") String valor,
                       @JsonAlias("MesReferencia") String mesReferencia) {
 
     public String toString() {
-        return "[Código FIPE: " + codigoFipe +
-                "Valor: " + valor +
-                "Marca: " + marca +
-                "Modelo: " + modelo +
-                "Ano do Modelo: " + anoModelo +
-                "Combustível: " + combustivel +
-                "Mês de consulta: " + mesReferencia + "]\n";
+        return "[Valor: " + valor +
+                " | Marca: " + marca +
+                " | Modelo: " + modelo +
+                " | Ano do Modelo: " + anoModelo +
+                " | Combustível: " + combustivel +
+                " | Mês de consulta: " + mesReferencia +
+                " | Código FIPE: " + codigoFipe + "]";
     }
 }
